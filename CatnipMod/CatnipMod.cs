@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatnipMod
 {
-    public class Class1
+    public class CatnipMod
     {
     }
 }
