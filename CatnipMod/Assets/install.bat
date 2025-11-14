@@ -1,6 +1,5 @@
 @echo off
 title Catnip Mod - Installer
-
 cd /d "%~dp0"
 echo Installing Bongo Cat Catnip mod...
 echo.
