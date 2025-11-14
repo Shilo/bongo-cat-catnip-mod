@@ -7,12 +7,18 @@ Catnip-infused mod that brings out [Bongo Cat](https://store.steampowered.com/ap
 1. Go to the [Releases](https://github.com/Shilo/bongo-cat-catnip-mod/releases) page
 2. Download the latest `CatnipMod.zip` file
 3. Extract the contents of the zip file
-4. Copy all files and folders to your Bongo Cat installation directory:
-   - **Default location:** `C:\Program Files (x86)\Steam\steamapps\common\BongoCat\`
-   - The extracted files should include:
-     - `winhttp.dll` (in the root)
-     - `doorstop_config.ini` (in the root)
-     - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
+
+**Option A: Automatic Installation (Recommended)**
+- Double-click `install.bat` in the extracted folder
+- If your Bongo Cat installation is in a non-default location, edit `install.bat` and change the `GAME_DIR` path before running
+
+**Option B: Manual Installation**
+- Copy all files and folders to your Bongo Cat installation directory:
+  - **Default location:** `C:\Program Files (x86)\Steam\steamapps\common\BongoCat\`
+  - The extracted files should include:
+    - `winhttp.dll` (in the root)
+    - `doorstop_config.ini` (in the root)
+    - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
 
 Your directory structure should look like this:
 ```
@@ -26,7 +32,7 @@ BongoCat/
 └── ... (other game files)
 ```
 
-5. Launch Bongo Cat through Steam as normal
+4. Launch Bongo Cat through Steam as normal
 
 ### Verification
 
@@ -34,10 +40,15 @@ After installation, when you launch the game, a file called `catnip.log` should 
 
 ### Uninstallation
 
-To remove the mod, delete the following from the game directory:
-- `winhttp.dll`
-- `doorstop_config.ini`
-- `CatnipMod\` folder
+**Option A: Automatic Uninstallation**
+- Double-click `uninstall.bat` in the extracted mod folder
+- If your Bongo Cat installation is in a non-default location, edit `uninstall.bat` and change the `GAME_DIR` path before running
+
+**Option B: Manual Uninstallation**
+- Delete the following from the game directory:
+  - `winhttp.dll`
+  - `doorstop_config.ini`
+  - `CatnipMod\` folder
 
 ---
 

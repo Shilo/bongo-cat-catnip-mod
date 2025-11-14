@@ -16,12 +16,13 @@
     <SteamLaunchArguments>-applaunch $(BongoCatSteamAppId)</SteamLaunchArguments>
     <BongoCatExecutablePath>$(BongoCatPath)\BongoCat.exe</BongoCatExecutablePath>
     <BongoCatManagedPath>$(BongoCatPath)\BongoCat_Data\Managed</BongoCatManagedPath>
+    <CatnipModInstallDirName>BongoCat</CatnipModInstallDirName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\$(AssemblyName)\</OutputPath>
+    <OutputPath>bin\Debug\$(CatnipModInstallDirName)\$(AssemblyName)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,7 +35,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\$(AssemblyName)\</OutputPath>
+    <OutputPath>bin\Debug\$(CatnipModInstallDirName)\$(AssemblyName)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,7 +46,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\$(AssemblyName)\</OutputPath>
+    <OutputPath>bin\Release\$(CatnipModInstallDirName)\$(AssemblyName)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -79,26 +80,32 @@
   <ItemGroup>
     <Content Include="Assets\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>..\%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
+      <TargetPath>..\..\%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
     </Content>
   </ItemGroup>
+  <Target Name="CopyReadmeToOutput" AfterTargets="Build">
+    <PropertyGroup>
+      <OutputRoot>$(OutputPath)..\..\</OutputRoot>
+    </PropertyGroup>
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\..\README.md" DestinationFiles="$(OutputRoot)README.md" SkipUnchangedFiles="true" />
+  </Target>
   <Target Name="CreateZip" AfterTargets="Build">
     <PropertyGroup>
-      <OutputRoot>$(OutputPath)..\</OutputRoot>
-      <ZipFileName Condition="'$(Configuration)' == 'Release'">$(OutputPath)..\..\$(AssemblyName).zip</ZipFileName>
-      <ZipFileName Condition="'$(Configuration)' != 'Release'">$(OutputPath)..\..\$(AssemblyName)-Debug.zip</ZipFileName>
+      <OutputRoot>$(OutputPath)..\..\</OutputRoot>
+      <ZipFilePath Condition="'$(Configuration)' == 'Release'">$(OutputPath)..\..\..\$(AssemblyName).zip</ZipFilePath>
+      <ZipFilePath Condition="'$(Configuration)' != 'Release'">$(OutputPath)..\..\..\$(AssemblyName)-Debug.zip</ZipFilePath>
     </PropertyGroup>
     <ItemGroup>
       <ZipFiles Include="$(OutputRoot)**\*.*" Exclude="$(OutputRoot)*.zip" />
     </ItemGroup>
-    <ZipDirectory SourceDirectory="$(OutputRoot)" DestinationFile="$(ZipFileName)" Overwrite="true" />
+    <ZipDirectory SourceDirectory="$(OutputRoot)" DestinationFile="$(ZipFilePath)" Overwrite="true" />
   </Target>
   <Target Name="CopyToBongoCat" AfterTargets="CreateZip">
     <PropertyGroup>
       <OutputRoot>$(OutputPath)..\</OutputRoot>
     </PropertyGroup>
     <ItemGroup>
-      <OutputFiles Include="$(OutputRoot)**\*.*" />
+      <OutputFiles Include="$(OutputRoot)$(CatnipModInstallDirName)\**\*.*" />
     </ItemGroup>
     <Copy SourceFiles="@(OutputFiles)" DestinationFiles="@(OutputFiles->'$(BongoCatPath)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <Message Text="Copied files to $(BongoCatPath)" Importance="high" />
