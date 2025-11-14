@@ -44,7 +44,7 @@
     <StartWorkingDirectory>$(BongoCatPath)</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\$(CatnipModInstallDirName)\$(AssemblyName)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -89,26 +89,25 @@
     </PropertyGroup>
     <Copy SourceFiles="$(MSBuildProjectDirectory)\..\README.md" DestinationFiles="$(OutputRoot)README.md" SkipUnchangedFiles="true" />
   </Target>
-  <Target Name="CreateZip" AfterTargets="Build">
+  <Target Name="CreateZip" AfterTargets="CopyReadmeToOutput">
     <PropertyGroup>
       <OutputRoot>$(OutputPath)..\..\</OutputRoot>
-      <ZipFilePath Condition="'$(Configuration)' == 'Release'">$(OutputPath)..\..\..\$(AssemblyName).zip</ZipFilePath>
-      <ZipFilePath Condition="'$(Configuration)' != 'Release'">$(OutputPath)..\..\..\$(AssemblyName)-Debug.zip</ZipFilePath>
+      <ZipFileSuffix Condition="'$(Configuration)' != 'Release'">-Debug</ZipFileSuffix>
     </PropertyGroup>
-    <ItemGroup>
-      <ZipFiles Include="$(OutputRoot)**\*.*" Exclude="$(OutputRoot)*.zip" />
-    </ItemGroup>
-    <ZipDirectory SourceDirectory="$(OutputRoot)" DestinationFile="$(ZipFilePath)" Overwrite="true" />
+    <ZipDirectory SourceDirectory="$(OutputRoot)" DestinationFile="$(OutputRoot)..\$(AssemblyName)$(ZipFileSuffix).zip" Overwrite="true" />
   </Target>
-  <Target Name="CopyToBongoCat" AfterTargets="CreateZip">
+  <Target Name="CloseExistingBongoCat" AfterTargets="CreateZip">
+    <Exec Command="taskkill /F /IM BongoCat.exe &gt;NUL 2&gt;&amp;1" IgnoreExitCode="true" ContinueOnError="true" />
+  </Target>
+  <Target Name="CopyToBongoCat" AfterTargets="CloseExistingBongoCat">
     <PropertyGroup>
-      <OutputRoot>$(OutputPath)..\</OutputRoot>
+      <OutputModRoot>$(OutputPath)..\</OutputModRoot>
     </PropertyGroup>
     <ItemGroup>
-      <OutputFiles Include="$(OutputRoot)$(CatnipModInstallDirName)\**\*.*" />
+      <OutputFiles Include="$(OutputModRoot)**\*.*" />
     </ItemGroup>
     <Copy SourceFiles="@(OutputFiles)" DestinationFiles="@(OutputFiles->'$(BongoCatPath)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    <Message Text="Copied files to $(BongoCatPath)" Importance="high" />
+    <Message Text="Copied mod files to $(BongoCatPath)" Importance="high" />
   </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
