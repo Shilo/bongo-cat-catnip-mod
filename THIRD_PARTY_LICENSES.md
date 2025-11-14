@@ -2,7 +2,7 @@
 
 This project includes third-party software libraries that are subject to their own license terms.
 
-## UnityDoorstop
+## [UnityDoorstop](https://github.com/NeighTools/UnityDoorstop)
 
 **Library:** UnityDoorstop (`winhttp.dll`)  
 **Source:** https://github.com/NeighTools/UnityDoorstop  
