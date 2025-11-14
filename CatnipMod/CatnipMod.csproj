@@ -86,7 +86,7 @@
     <PropertyGroup>
       <OutputRoot>$(OutputPath)..\</OutputRoot>
       <ZipFileName Condition="'$(Configuration)' == 'Release'">$(OutputPath)..\..\$(AssemblyName).zip</ZipFileName>
-      <ZipFileName Condition="'$(Configuration)' != 'Release'">$(OutputPath)..\..\$(AssemblyName)-$(Configuration).zip</ZipFileName>
+      <ZipFileName Condition="'$(Configuration)' != 'Release'">$(OutputPath)..\..\$(AssemblyName)-Debug.zip</ZipFileName>
     </PropertyGroup>
     <ItemGroup>
       <ZipFiles Include="$(OutputRoot)**\*.*" Exclude="$(OutputRoot)*.zip" />
