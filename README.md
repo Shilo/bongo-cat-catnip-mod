@@ -1,6 +1,28 @@
-# Bongo Cat Catnip Mod
+# [Bongo Cat Catnip Mod](https://github.com/Shilo/bongo-cat-catnip-mod/)
+
+[![Bongo Cat Logo](CatnipMod/Assets/BongoCat/CatnipMod/logo.png)](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
 Catnip-infused mod that brings out [Bongo Cat](https://store.steampowered.com/app/3419430/Bongo_Cat/)'s zoomies and purrs. Includes quality of life features and fixes. Free, safe, and no cheats.
+
+## Features
+
+TODO
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+  - [Verification](#verification)
+  - [Uninstallation](#uninstallation)
+- [Developer Setup](#developer-setup)
+  - [Prerequisites](#prerequisites)
+  - [Initial Setup](#initial-setup)
+  - [Building](#building)
+  - [Project Structure](#project-structure)
+  - [Development Workflow](#development-workflow)
+  - [Key Files](#key-files)
+  - [Notes](#notes)
+- [Third-Party Libraries](#third-party-libraries)
 
 ## Installation
 
@@ -8,19 +30,24 @@ Catnip-infused mod that brings out [Bongo Cat](https://store.steampowered.com/ap
 2. Download the latest `CatnipMod.zip` file
 3. Extract the contents of the zip file
 
-**Option A: Automatic Installation (Recommended)**
-- Double-click `install.bat` in the extracted folder
-- If your Bongo Cat installation is in a non-default location, edit `install.bat` and change the `GAME_DIR` path before running
+**Automatic Installation (Recommended)**
 
-**Option B: Manual Installation**
-- Copy all files and folders to your Bongo Cat installation directory:
+- Double-click `install.bat` in the extracted folder
+- The installer will automatically detect your Bongo Cat installation path
+- If Bongo Cat is running, it will be automatically closed to ensure a clean installation
+- Only mod files (`winhttp.dll`, `doorstop_config.ini`, and `CatnipMod\` folder) will be copied to the game directory
+- The game directory will open in Windows Explorer after successful installation
+
+**Manual Installation**
+
+- Copy all files and folders from the `BongoCat` folder to your Bongo Cat installation directory:
   - **Default location:** `C:\Program Files (x86)\Steam\steamapps\common\BongoCat\`
-  - The extracted files should include:
+  - The files to copy include:
     - `winhttp.dll` (in the root)
     - `doorstop_config.ini` (in the root)
     - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
 
-Your directory structure should look like this:
+Your game directory structure should look like this:
 ```
 BongoCat/
 ├── BongoCat.exe
@@ -36,19 +63,26 @@ BongoCat/
 
 ### Verification
 
-After installation, when you launch the game, a file called `catnip.log` should be created in the game directory. This confirms the mod is working.
+TODO
 
 ### Uninstallation
 
-**Option A: Automatic Uninstallation**
-- Double-click `uninstall.bat` in the extracted mod folder
-- If your Bongo Cat installation is in a non-default location, edit `uninstall.bat` and change the `GAME_DIR` path before running
+**Automatic Uninstallation**
 
-**Option B: Manual Uninstallation**
-- Delete the following from the game directory:
-  - `winhttp.dll`
-  - `doorstop_config.ini`
-  - `CatnipMod\` folder
+- Double-click `uninstall.bat` in the extracted mod folder
+- The uninstaller will automatically detect your Bongo Cat installation path
+- If Bongo Cat is running, it will be automatically closed to ensure a clean uninstallation
+- Only mod files (`winhttp.dll`, `doorstop_config.ini`, and `CatnipMod\` folder) will be deleted from the game directory
+- The game directory will open in Windows Explorer after successful uninstallation
+
+**Manual Uninstallation**
+
+- Delete the mod files from your Bongo Cat installation directory:
+  - **Default location:** `C:\Program Files (x86)\Steam\steamapps\common\BongoCat\`
+  - The files to delete include:
+    - `winhttp.dll` (in the root)
+    - `doorstop_config.ini` (in the root)
+    - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
 
 ---
 
@@ -96,19 +130,23 @@ The project has three build configurations:
 
 - **Debug** - Builds with debug symbols, launches via Steam
 - **Debug (No Steam)** - Builds with debug symbols, launches `BongoCat.exe` directly
-- **Release** - Optimized build, launches via Steam
+- **Release** - Optimized build without debug symbols, launches via Steam
 
 **To build:**
 1. Select your desired configuration from the dropdown
 2. Build the solution (F6 or Build → Build Solution)
 
 **Build outputs:**
-- Debug builds: `CatnipMod\bin\Debug\CatnipMod\`
-- Release builds: `CatnipMod\bin\Release\CatnipMod\`
+- Debug builds: `CatnipMod\bin\Debug\`
+- Release builds: `CatnipMod\bin\Release\`
 - Zip files are automatically created in `CatnipMod\bin\` after building
+  - Debug builds create `CatnipMod-Debug.zip`
+  - Release builds create `CatnipMod.zip`
 
 **Automatic deployment:**
-- After building, files are automatically copied to your Bongo Cat installation directory
+- After building, `BongoCat.exe` is automatically closed if running
+- Files are automatically copied to your Bongo Cat installation directory
+- The game is automatically launched (via Steam for Debug/Release, or directly for "Debug (No Steam)")
 - The mod is ready to test immediately after building
 
 ### Project Structure
@@ -118,10 +156,13 @@ CatnipMod/
 ├── CatnipMod.cs          # Main mod class
 ├── Entrypoint.cs         # UnityDoorstop entry point (runs when game starts)
 ├── Assets/
-│   ├── CatnipMod/
-│   │   └── ...              # Mod assets
-│   ├── doorstop_config.ini  # UnityDoorstop configuration
-│   └── winhttp.dll          # UnityDoorstop loader
+│   ├── BongoCat/         # Mod files organized for release
+│   │   ├── CatnipMod/
+│   │   │   └── ...              # Mod assets
+│   │   ├── doorstop_config.ini  # UnityDoorstop configuration
+│   │   └── winhttp.dll          # UnityDoorstop loader
+│   ├── install.bat       # Installation script (copied to release)
+│   └── uninstall.bat     # Uninstallation script (copied to release)
 └── Properties/
     └── AssemblyInfo.cs   # Assembly metadata
 ```
@@ -137,6 +178,16 @@ CatnipMod/
 - **`Entrypoint.cs`** - This is where your mod code runs when the game starts. The `Start()` method is called by UnityDoorstop before the game's main code executes.
 - **`CatnipMod.cs`** - Main mod class where you can add your mod functionality.
 - **`doorstop_config.ini`** - Configures UnityDoorstop to load your mod DLL.
+- **`install.bat`** - Automated installation script that:
+  - Automatically detects Bongo Cat installation path from Windows registry
+  - Closes Bongo Cat if running
+  - Copies mod files and verifies installation
+  - Opens game directory after completion
+- **`uninstall.bat`** - Automated uninstallation script that:
+  - Automatically detects Bongo Cat installation path from Windows registry
+  - Closes Bongo Cat if running
+  - Removes mod files and verifies deletion
+  - Opens game directory after completion
 
 ### Notes
 
@@ -144,6 +195,8 @@ CatnipMod/
 - Target framework is **.NET Framework 4.0** (matches Unity's runtime)
 - Unity assemblies are referenced from `BongoCat_Data\Managed\`
 - The build system automatically creates zip files for distribution
+- Release builds do not generate PDB files (debug symbols)
+- Installation scripts automatically detect Steam installation paths from registry (HKCU, then HKLM, then common locations)
 
 ---
 
