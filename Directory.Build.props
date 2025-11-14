@@ -1,6 +1,8 @@
 <Project>
   <Import Project="Directory.Local.props" Condition="Exists('Directory.Local.props')" />
   <PropertyGroup>
-    <BongoCatPath Condition="'$(BongoCatPath)' == ''">C:\Program Files (x86)\Steam\steamapps\common\BongoCat</BongoCatPath>
+    <SteamPath Condition="'$(SteamPath)' == ''">C:\Program Files (x86)\Steam</SteamPath>
+    <BongoCatPath Condition="'$(BongoCatPath)' == ''">$(SteamPath)\steamapps\common\BongoCat</BongoCatPath>
+    <BongoCatSteamAppId Condition="'$(BongoCatSteamAppId)' == ''">3419430</BongoCatSteamAppId>
   </PropertyGroup>
 </Project>

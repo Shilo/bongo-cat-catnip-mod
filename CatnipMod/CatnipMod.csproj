@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <SteamExecutablePath>$(SteamPath)\steam.exe</SteamExecutablePath>
+    <SteamLaunchArguments>-applaunch $(BongoCatSteamAppId)</SteamLaunchArguments>
     <BongoCatExecutablePath>$(BongoCatPath)\BongoCat.exe</BongoCatExecutablePath>
     <BongoCatManagedPath>$(BongoCatPath)\BongoCat_Data\Managed</BongoCatManagedPath>
   </PropertyGroup>
@@ -24,7 +26,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <StartAction>Program</StartAction>
-    <StartProgram>$(BongoCatExecutablePath)</StartProgram>
+    <StartProgram>$(SteamExecutablePath)</StartProgram>
+    <StartArguments>$(SteamLaunchArguments)</StartArguments>
     <StartWorkingDirectory>$(BongoCatPath)</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -35,7 +38,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <StartAction>Program</StartAction>
-    <StartProgram>$(BongoCatExecutablePath)</StartProgram>
+    <StartProgram>$(SteamExecutablePath)</StartProgram>
+    <StartArguments>$(SteamLaunchArguments)</StartArguments>
     <StartWorkingDirectory>$(BongoCatPath)</StartWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>
