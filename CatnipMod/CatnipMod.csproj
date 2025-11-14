@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\$(AssemblyName)\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Release\$(AssemblyName)\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -53,5 +53,32 @@
     <Compile Include="Entrypoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>..\%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
+    </Content>
+  </ItemGroup>
+  <Target Name="CreateZip" AfterTargets="Build">
+    <PropertyGroup>
+      <OutputRoot>$(OutputPath)..\</OutputRoot>
+      <ZipFileName Condition="'$(Configuration)' == 'Release'">$(OutputPath)..\..\$(AssemblyName).zip</ZipFileName>
+      <ZipFileName Condition="'$(Configuration)' != 'Release'">$(OutputPath)..\..\$(AssemblyName)-$(Configuration).zip</ZipFileName>
+    </PropertyGroup>
+    <ItemGroup>
+      <ZipFiles Include="$(OutputRoot)**\*.*" Exclude="$(OutputRoot)*.zip" />
+    </ItemGroup>
+    <ZipDirectory SourceDirectory="$(OutputRoot)" DestinationFile="$(ZipFileName)" Overwrite="true" />
+  </Target>
+  <Target Name="CopyToBongoCat" AfterTargets="CreateZip">
+    <PropertyGroup>
+      <OutputRoot>$(OutputPath)..\</OutputRoot>
+    </PropertyGroup>
+    <ItemGroup>
+      <OutputFiles Include="$(OutputRoot)**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(OutputFiles)" DestinationFiles="@(OutputFiles->'$(BongoCatPath)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Message Text="Copied files to $(BongoCatPath)" Importance="high" />
+  </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
