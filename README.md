@@ -23,6 +23,7 @@ TODO
   - [Key Files](#key-files)
   - [Notes](#notes)
 - [Third-Party Libraries](#third-party-libraries)
+  - [UnityDoorstop](#unitydoorstop-winhttpdll)
 
 ## Installation
 
@@ -91,6 +92,8 @@ TODO
 ### Prerequisites
 
 - **Visual Studio 2019 or later** (or any IDE that supports .NET Framework 4.0+ projects)
+  - Download: [Visual Studio 2026 Community](https://visualstudio.microsoft.com/downloads/) (free)
+  - Or [Build Tools for Visual Studio 2026](https://aka.ms/vs/stable/vs_BuildTools.exe) (minimal installation, no IDE)
 - **Bongo Cat** installed via Steam
 - **.NET Framework 4.0** or later
 
@@ -132,7 +135,22 @@ The project has three build configurations:
 - **Debug (No Steam)** - Builds with debug symbols, launches `BongoCat.exe` directly
 - **Release** - Optimized build without debug symbols, launches via Steam
 
-**To build:**
+**Quick Build (No Visual Studio Required):**
+
+For users who want to compile the project without opening Visual Studio:
+
+1. Double-click `build.bat` in the project root directory
+2. The script will automatically find MSBuild and build the Release configuration
+3. The compiled files will be in `CatnipMod\bin\Release\`
+4. A zip file will be created at `CatnipMod\bin\CatnipMod.zip`
+5. The output directory (`CatnipMod\bin`) will automatically open in Windows Explorer after a successful build
+
+> **Note:** You still need Visual Studio or Visual Studio Build Tools installed for MSBuild to be available. The script will automatically detect MSBuild from common installation paths, including Visual Studio 2017, 2019, 2022, 2025, and 2026 (version 18).
+> 
+> **Don't have Visual Studio?** See [Prerequisites](#prerequisites) for download links.
+
+**Building in Visual Studio:**
+
 1. Select your desired configuration from the dropdown
 2. Build the solution (F6 or Build → Build Solution)
 
