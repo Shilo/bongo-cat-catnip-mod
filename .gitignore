@@ -418,5 +418,5 @@ FodyWeavers.xsd
 *.msp
 
 # Custom
-_BongoCatSrc/
+.BongoCatSrc/
 Directory.Local.props
