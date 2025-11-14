@@ -72,11 +72,11 @@ if exist "%SOURCE_DIR%" (
 
 echo.
 if %ERROR% equ 0 (
-    echo        /\___/\ 
-    echo       ^( o ^. o ^)
-    echo.
     echo Installation complete.
     echo Launch Bongo Cat through Steam to verify the mod is working.
+    echo.
+    echo        /\___/\ 
+    echo       ^( o ^. o ^)
     
     start "" "%GAME_DIR%"
 ) else (

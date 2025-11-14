@@ -94,10 +94,10 @@ for /f "tokens=*" %%I in ("%FILES_TO_REMOVE%") do (
 
 echo.
 if %ERROR% equ 0 (
+    echo Uninstallation complete.
+    echo.
     echo        /\___/\ 
     echo       ^( o ^. o ^)
-    echo.
-    echo Uninstallation complete.
 
     start "" "%GAME_DIR%"
 ) else (

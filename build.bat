@@ -132,7 +132,9 @@ if %ERRORLEVEL% == 0 (
     echo Output location: CatnipMod\bin\Release\
     echo Zip file: CatnipMod\bin\CatnipMod.zip
     echo.
-    echo Opening output directory...
+    echo        /\___/\ 
+    echo       ^( o ^. o ^)
+
     start "" explorer "CatnipMod\bin"
 ) else (
     echo.
