@@ -418,6 +418,8 @@ FodyWeavers.xsd
 *.msp
 
 # Custom
+!CatnipMod/Debug/
+
 .cursorignore
 .BongoCatSrc/
 Directory.Local.props
