@@ -2,9 +2,9 @@
 
 [![Bongo Cat Logo](CatnipMod/Assets/BongoCat/CatnipMod/logo.png)](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
-> Catnip-infused mod that brings out [Bongo Cat](#bongo-cat-game)'s zoomies and purrs. Includes quality of life features and fixes. Free, safe, and no cheats.
+> Catnip-infused mod that brings out [Bongo Cat](#bongo-cat-game-)'s zoomies and purrs. Includes quality of life features and fixes. Free, safe, and no cheats.
 
-This mod extends the [Bongo Cat](#bongo-cat-game) game with additional features and improvements by modifying the game's code while it runs, without changing the original game files.
+This mod extends the [Bongo Cat](#bongo-cat-game-) game with additional features and improvements by modifying the game's code while it runs, without changing the original game files.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ This mod extends the [Bongo Cat](#bongo-cat-game) game with additional features 
 - [Installation](#installation)
   - [Verification](#verification)
   - [Uninstallation](#uninstallation)
-- [Bongo Cat Game](#bongo-cat-game)
+- [Bongo Cat Game](#bongo-cat-game-)
 - [Developer Setup ↗](docs/DEVELOPER.md)
 - [License ↗](LICENSE.md)
 

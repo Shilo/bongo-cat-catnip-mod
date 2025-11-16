@@ -12,8 +12,8 @@ This document provides instructions for setting up a development environment, bu
 - [Development Workflow](#development-workflow)
 - [Key Files](#key-files)
 - [Third-Party Libraries](#third-party-libraries)
-  - [UnityDoorstop](#unitydoorstop-winhttpdll)
-  - [Harmony](#harmony-0harmonydll)
+  - [UnityDoorstop](#unitydoorstop--winhttpdll)
+  - [Harmony](#harmony--0harmonydll)
   - [Licenses](#licenses)
 - [README ↗](../README.md)
 
