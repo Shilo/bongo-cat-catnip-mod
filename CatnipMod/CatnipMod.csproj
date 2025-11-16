@@ -56,6 +56,10 @@
     <StartWorkingDirectory>$(BongoCatPath)</StartWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>$(BongoCatManagedPath)\com.rlabrecque.steamworks.net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
