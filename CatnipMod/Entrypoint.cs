@@ -1,4 +1,4 @@
-﻿using System.IO;
+﻿//using HarmonyLib;
 
 namespace Doorstop
 {
@@ -6,7 +6,8 @@ namespace Doorstop
 	{
 		public static void Start()
 		{
-			File.WriteAllText("catnip.log", "Hello world!");
+			//var harmony = new Harmony("com.shilo.catnipmod");
+			//harmony.PatchAll();
 		}
 	}
 }
