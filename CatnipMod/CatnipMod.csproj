@@ -88,7 +88,8 @@
     <Compile Include="CatnipMod.cs" />
     <Compile Include="Utilities\DoorstopUtil.cs" />
     <Compile Include="Utilities\HarmonyUtil.cs" />
-    <Compile Include="Utilities\Log.cs" />
+    <Compile Include="Debug\Log.cs" />
+    <Compile Include="Debug\TimestampLogHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

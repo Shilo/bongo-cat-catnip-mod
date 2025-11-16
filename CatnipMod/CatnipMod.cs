@@ -1,4 +1,4 @@
-using CatnipMod.Utilities;
+using CatnipMod.Debug;
 using System.Reflection;
 using UnityEngine;
 
