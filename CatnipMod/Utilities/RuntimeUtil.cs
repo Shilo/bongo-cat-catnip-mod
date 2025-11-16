@@ -1,3 +1,7 @@
+using CatnipMod.Debug;
+using System;
+using System.Diagnostics;
+
 namespace CatnipMod.Utilities
 {
 	/// <summary>
@@ -23,6 +27,38 @@ namespace CatnipMod.Utilities
 
 			var declaringType = method.DeclaringType;
 			return declaringType != null ? declaringType.Name : null;
+		}
+
+		/// <summary>
+		/// Benchmarks the execution time of an action and logs the results.
+		/// </summary>
+		/// <param name="action">The action to benchmark.</param>
+		/// <param name="name">The name/description of the benchmark (default: "Benchmark")</param>
+		/// <param name="iterations">Number of iterations to run (default: 1)</param>
+		public static void Benchmark(Action action, string name = "Benchmark", int iterations = 1)
+		{
+			if (action == null)
+				throw new ArgumentNullException(nameof(action));
+			if (iterations <= 0)
+				throw new ArgumentOutOfRangeException(nameof(iterations), iterations, "Iterations must be greater than zero.");
+
+			var sw = Stopwatch.StartNew();
+			for (int i = 0; i < iterations; i++)
+			{
+				action();
+			}
+			sw.Stop();
+
+			var totalMs = sw.Elapsed.TotalMilliseconds;
+
+			if (iterations == 1)
+			{
+				Log.Info($"{name}: {totalMs:F3}ms");
+				return;
+			}
+
+			var avgMs = totalMs / iterations;
+			Log.Info($"{name}: {totalMs:F3}ms total, {avgMs:F3}ms average ({iterations} iterations)");
 		}
 	}
 }

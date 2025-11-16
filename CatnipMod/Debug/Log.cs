@@ -15,17 +15,32 @@ namespace CatnipMod.Debug
 
 		public static void Info(params object[] messages)
 		{
-			UnityEngine.Debug.Log(BuildMessage(messages));
+			UnityEngine.Debug.Log(BuildMessage(null, messages));
+		}
+
+		public static void InfoT(object tag, params object[] messages)
+		{
+			UnityEngine.Debug.Log(BuildMessage(tag, messages));
 		}
 
 		public static void Warning(params object[] messages)
 		{
-			UnityEngine.Debug.LogWarning(BuildMessage(messages));
+			UnityEngine.Debug.LogWarning(BuildMessage(null, messages));
+		}
+
+		public static void WarningT(object tag, params object[] messages)
+		{
+			UnityEngine.Debug.LogWarning(BuildMessage(tag, messages));
 		}
 
 		public static void Error(params object[] messages)
 		{
-			UnityEngine.Debug.LogError(BuildMessage(messages));
+			UnityEngine.Debug.LogError(BuildMessage(null, messages));
+		}
+
+		public static void ErrorT(object tag, params object[] messages)
+		{
+			UnityEngine.Debug.LogError(BuildMessage(tag, messages));
 		}
 
 		public static void Exception(System.Exception exception, params object[] messages)
@@ -35,16 +50,45 @@ namespace CatnipMod.Debug
 				messages.Length > 0 ? $": {exception}" : exception.ToString()
 			};
 
-			UnityEngine.Debug.LogError(BuildMessage(allMessages.ToArray()));
+			UnityEngine.Debug.LogError(BuildMessage(null, allMessages.ToArray()));
 		}
 
-		private static string BuildMessage(params object[] messages)
+		public static void ExceptionT(object tag, System.Exception exception, params object[] messages)
 		{
-			var callerClass = RuntimeUtil.GetCallerClassName(skipFrames: 3);
-			var callerClassPrefix = callerClass != null ? $"{callerClass} | " : string.Empty;
+			var allMessages = new List<object>(messages)
+			{
+				messages.Length > 0 ? $": {exception}" : exception.ToString()
+			};
+
+			UnityEngine.Debug.LogError(BuildMessage(tag, allMessages.ToArray()));
+		}
+
+		private static string BuildMessage(object tag, params object[] messages)
+		{
+			var tagPrefix = GetTagPrefix(tag);
 			var message = string.Join(" ", messages.Select(m => m?.ToString() ?? "null"));
 
-			return $"{Prefix} {callerClassPrefix}{message}";
+			return $"{Prefix} {tagPrefix}{message}";
+		}
+
+		private static string GetTagPrefix(object tag)
+		{
+			string tagName;
+
+			if (tag is string stringTag)
+			{
+				tagName = stringTag;
+			}
+			else if (tag != null)
+			{
+				tagName = tag.GetType().Name;
+			}
+			else
+			{
+				tagName = RuntimeUtil.GetCallerClassName(skipFrames: 4) ?? "Unknown";
+			}
+
+			return $"{tagName} | ";
 		}
 	}
 }

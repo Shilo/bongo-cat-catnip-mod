@@ -15,12 +15,12 @@ namespace CatnipMod
 			var version = versionAttr?.Version ?? "Unknown";
 			var company = companyAttr?.Company ?? "Unknown";
 
-			Log.Info($"Mod v{version} by {company} loaded.");
+			Log.InfoT(this, $"Mod v{version} by {company} loaded.");
 		}
 
 		private void OnDestroy()
 		{
-			Log.Info("Mod unloaded.");
+			Log.InfoT(this, "Mod unloaded.");
 		}
 	}
 }
