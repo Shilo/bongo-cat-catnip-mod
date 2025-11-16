@@ -1,13 +1,13 @@
 # Third-Party Licenses
 
-← [Back to README](README.md)
+[← Back to README](README.md)
 
 This project includes third-party software libraries that are subject to their own license terms.
 
-## [Harmony ↗](https://github.com/pardeike/Harmony)
+## [Harmony →](https://github.com/pardeike/Harmony)
 
 **Library:** Harmony (`0Harmony.dll`)  
-**Source:** https://github.com/pardeike/Harmony  
+**Source:** [https://github.com/pardeike/Harmony ↗](https://github.com/pardeike/Harmony)  
 **License:** [MIT License ↗](https://github.com/pardeike/Harmony/blob/master/LICENSE)  
 **Copyright:** Copyright (c) 2017 Andreas Pardeike
 
@@ -37,10 +37,10 @@ SOFTWARE.
 
 ---
 
-## [UnityDoorstop ↗](https://github.com/NeighTools/UnityDoorstop)
+## [UnityDoorstop →](https://github.com/NeighTools/UnityDoorstop)
 
 **Library:** UnityDoorstop (`winhttp.dll`)  
-**Source:** https://github.com/NeighTools/UnityDoorstop  
+**Source:** [https://github.com/NeighTools/UnityDoorstop ↗](https://github.com/NeighTools/UnityDoorstop)  
 **License:** [GNU Lesser General Public License v2.1 ↗](https://github.com/NeighTools/UnityDoorstop/blob/master/LICENSE)  
 **Copyright:** Copyright (C) NeighTools
 

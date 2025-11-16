@@ -83,7 +83,7 @@ For users who want to compile the project without opening Visual Studio:
 3. The compiled files will be in `CatnipMod\bin\Release\`
 4. A zip file will be created at `CatnipMod\bin\CatnipMod.zip`
 5. The output directory (`CatnipMod\bin`) will automatically open in Windows Explorer after a successful build
-6. **Install the mod** by following the [Installation](README.md#installation) instructions using the files from `CatnipMod\bin\Release\BongoCat\`
+6. **Install the mod** by following the [Installation ↗](README.md#installation) instructions using the files from `CatnipMod\bin\Release\BongoCat\`
 
 > **Note:** You still need Visual Studio or Visual Studio Build Tools installed for MSBuild to be available. The script will automatically detect MSBuild from common installation paths, including Visual Studio 2017, 2019, 2022, 2025, and 2026 (version 18).
 > 
@@ -149,13 +149,13 @@ CatnipMod/
 
 ## Third-Party Libraries
 
-### [UnityDoorstop ↗](https://github.com/NeighTools/UnityDoorstop) (`winhttp.dll`)
+### [UnityDoorstop →](https://github.com/NeighTools/UnityDoorstop) (`winhttp.dll`)
 
 **Version:** [4.4.1+ ↗](https://github.com/NeighTools/UnityDoorstop/releases/tag/v4.4.1)
 
 A library that enables modding Unity games by injecting and executing managed .NET assemblies early in the Unity runtime, before the game's main code runs. This allows mods to hook into game systems and modify behavior.
 
-### [Harmony ↗](https://github.com/pardeike/Harmony) (`0Harmony.dll`)
+### [Harmony →](https://github.com/pardeike/Harmony) (`0Harmony.dll`)
 
 **Version:** [Harmony-Fat 2.4.2.0+ (net48) ↗](https://github.com/pardeike/Harmony/releases/tag/v2.4.2.0)
 

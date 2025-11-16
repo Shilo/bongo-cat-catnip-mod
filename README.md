@@ -1,4 +1,4 @@
-# [Bongo Cat Catnip Mod ↗](https://github.com/Shilo/bongo-cat-catnip-mod/)
+# [Bongo Cat Catnip Mod →](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
 [![Bongo Cat Logo](CatnipMod/Assets/BongoCat/CatnipMod/logo.png)](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
@@ -80,7 +80,7 @@ TODO
     - `doorstop_config.ini` (in the root)
     - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
 
-## [Bongo Cat Game ↗](https://store.steampowered.com/app/3419430/Bongo_Cat/)
+## [Bongo Cat Game →](https://store.steampowered.com/app/3419430/Bongo_Cat/)
 
 [![Steam](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3419430/2e6c93c020fe13d09d8120bb9164ed7cb58f00c5/header.jpg?t=1759317272)](https://store.steampowered.com/app/3419430/Bongo_Cat/)
 
