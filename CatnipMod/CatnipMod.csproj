@@ -84,8 +84,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatnipMod.cs" />
     <Compile Include="Entrypoint.cs" />
+    <Compile Include="CatnipMod.cs" />
+    <Compile Include="Utilities\DoorstopUtil.cs" />
+    <Compile Include="Utilities\HarmonyUtil.cs" />
+    <Compile Include="Utilities\Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

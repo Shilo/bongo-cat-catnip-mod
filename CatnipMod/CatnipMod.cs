@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using CatnipMod.Utilities;
+using UnityEngine;
 
 namespace CatnipMod
 {
@@ -6,12 +7,12 @@ namespace CatnipMod
 	{
 		private void Awake()
 		{
-			Debug.Log("[CatnipMod] Mod initialized.");
+			Log.Info("Mod loaded.");
 		}
 
 		private void OnDestroy()
 		{
-			Debug.Log("[CatnipMod] Mod unloaded.");
+			Log.Info("Mod unloaded.");
 		}
 	}
 }
