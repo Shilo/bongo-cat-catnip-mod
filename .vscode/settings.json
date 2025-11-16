@@ -272,7 +272,8 @@
         "**/*.msp": true,
         // Custom - but NOT .BongoCatSrc/ (so it remains searchable)
         "**/.cursorignore": true,
-        "**/Directory.Local.props": true
+        "**/Directory.Local.props": true,
+        "CatnipMod/Debug/**": false, // Exception: include source code Debug folder
         // Note: .BongoCatSrc/ is intentionally NOT in this list so it can be searched
     }
 }
