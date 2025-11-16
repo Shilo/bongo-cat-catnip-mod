@@ -1,3 +1,4 @@
+using CatnipMod.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -39,26 +40,11 @@ namespace CatnipMod.Debug
 
 		private static string BuildMessage(params object[] messages)
 		{
-			var callerClass = GetCallerClass();
+			var callerClass = RuntimeUtil.GetCallerClassName(skipFrames: 3);
 			var callerClassPrefix = callerClass != null ? $"{callerClass} | " : string.Empty;
 			var message = string.Join(" ", messages.Select(m => m?.ToString() ?? "null"));
 
 			return $"{Prefix} {callerClassPrefix}{message}";
-		}
-
-		private static string GetCallerClass()
-		{
-			var stackTrace = new System.Diagnostics.StackTrace(skipFrames: 3);
-			var frame = stackTrace.GetFrame(0);
-			if (frame == null)
-				return null;
-
-			var method = frame.GetMethod();
-			if (method == null)
-				return null;
-
-			var declaringType = method.DeclaringType;
-			return declaringType != null ? declaringType.Name : null;
 		}
 	}
 }
