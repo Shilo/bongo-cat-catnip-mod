@@ -60,6 +60,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Assets\BongoCat\CatnipMod\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(BongoCatManagedPath)\Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="com.rlabrecque.steamworks.net">
       <HintPath>$(BongoCatManagedPath)\com.rlabrecque.steamworks.net.dll</HintPath>
       <Private>False</Private>
