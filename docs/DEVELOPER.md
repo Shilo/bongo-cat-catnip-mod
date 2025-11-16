@@ -15,7 +15,7 @@ This document provides instructions for setting up a development environment, bu
   - [UnityDoorstop](#unitydoorstop-winhttpdll)
   - [Harmony](#harmony-0harmonydll)
   - [Licenses](#licenses)
-- [README ↗](README.md)
+- [README ↗](../README.md)
 
 ## Notes
 
@@ -83,7 +83,7 @@ For users who want to compile the project without opening Visual Studio:
 3. The compiled files will be in `CatnipMod\bin\Release\`
 4. A zip file will be created at `CatnipMod\bin\CatnipMod.zip`
 5. The output directory (`CatnipMod\bin`) will automatically open in Windows Explorer after a successful build
-6. **Install the mod** by following the [Installation ↗](README.md#installation) instructions using the files from `CatnipMod\bin\Release\BongoCat\`
+6. **Install the mod** by following the [Installation ↗](../README.md#installation) instructions using the files from `CatnipMod\bin\Release\BongoCat\`
 
 > **Note:** You still need Visual Studio or Visual Studio Build Tools installed for MSBuild to be available. The script will automatically detect MSBuild from common installation paths, including Visual Studio 2017, 2019, 2022, 2025, and 2026 (version 18).
 > 

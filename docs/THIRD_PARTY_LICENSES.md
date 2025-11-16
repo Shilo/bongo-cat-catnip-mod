@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-[← Back to README](README.md)
+[← Back to README](../README.md)
 
 This project includes third-party software libraries that are subject to their own license terms.
 

@@ -13,7 +13,7 @@ This mod extends the [Bongo Cat](#bongo-cat-game) game with additional features 
   - [Verification](#verification)
   - [Uninstallation](#uninstallation)
 - [Bongo Cat Game](#bongo-cat-game)
-- [Developer Setup ↗](DEVELOPER.md)
+- [Developer Setup ↗](docs/DEVELOPER.md)
 - [License ↗](LICENSE.md)
 
 ## Features
