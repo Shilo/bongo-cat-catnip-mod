@@ -1,0 +1,278 @@
+{
+    // Configure search to always include .BongoCatSrc/ even though it's in .gitignore
+    // Disable .gitignore for search since we're manually managing exclusions
+    "search.useIgnoreFiles": false,
+    // All other .gitignore patterns are applied to search.exclude
+    "search.exclude": {
+        // User-specific files
+        "**/*.rsuser": true,
+        "**/*.suo": true,
+        "**/*.user": true,
+        "**/*.userosscache": true,
+        "**/*.sln.docstates": true,
+        "**/*.env": true,
+        "**/*.userprefs": true,
+        "**/mono_crash.*": true,
+        // Build results
+        "**/[Dd]ebug/": true,
+        "**/[Dd]ebugPublic/": true,
+        "**/[Rr]elease/": true,
+        "**/[Rr]eleases/": true,
+        "**/x64/": true,
+        "**/x86/": true,
+        "**/[Ww][Ii][Nn]32/": true,
+        "**/[Aa][Rr][Mm]/": true,
+        "**/[Aa][Rr][Mm]64/": true,
+        "**/[Aa][Rr][Mm]64[Ee][Cc]/": true,
+        "**/bld/": true,
+        "**/[Oo]bj/": true,
+        "**/[Oo]ut/": true,
+        "**/[Ll]og/": true,
+        "**/[Ll]ogs/": true,
+        "**/[Bb]in/*": true,
+        // Visual Studio
+        "**/.vs/": true,
+        "**/Generated Files/": true,
+        // Test results
+        "**/[Tt]est[Rr]esult*/": true,
+        "**/[Bb]uild[Ll]og.*": true,
+        "**/*.trx": true,
+        "**/*.VisualState.xml": true,
+        "**/TestResult.xml": true,
+        "**/nunit-*.xml": true,
+        "**/*.received.*": true,
+        // Build results
+        "**/[Dd]ebugPS/": true,
+        "**/[Rr]eleasePS/": true,
+        "**/dlldata.c": true,
+        "**/BenchmarkDotNet.Artifacts/": true,
+        "**/project.lock.json": true,
+        "**/project.fragment.lock.json": true,
+        "**/artifacts/": true,
+        "**/ScaffoldingReadMe.txt": true,
+        "**/StyleCopReport.xml": true,
+        // Files built by Visual Studio
+        "**/*_i.c": true,
+        "**/*_p.c": true,
+        "**/*_h.h": true,
+        "**/*.ilk": true,
+        "**/*.meta": true,
+        "**/*.obj": true,
+        "**/*.idb": true,
+        "**/*.iobj": true,
+        "**/*.pch": true,
+        "**/*.pdb": true,
+        "**/*.ipdb": true,
+        "**/*.pgc": true,
+        "**/*.pgd": true,
+        "**/*.rsp": true,
+        "**/*.sbr": true,
+        "**/*.tlb": true,
+        "**/*.tli": true,
+        "**/*.tlh": true,
+        "**/*.tmp": true,
+        "**/*.tmp_proj": true,
+        "**/*_wpftmp.csproj": true,
+        "**/*.log": true,
+        "**/*.tlog": true,
+        "**/*.vspscc": true,
+        "**/*.vssscc": true,
+        "**/.builds": true,
+        "**/*.pidb": true,
+        "**/*.svclog": true,
+        "**/*.scc": true,
+        // Chutzpah
+        "**/_Chutzpah*": true,
+        // Visual C++ cache
+        "**/ipch/": true,
+        "**/*.aps": true,
+        "**/*.ncb": true,
+        "**/*.opendb": true,
+        "**/*.opensdf": true,
+        "**/*.sdf": true,
+        "**/*.cachefile": true,
+        "**/*.VC.db": true,
+        "**/*.VC.VC.opendb": true,
+        // Profiler
+        "**/*.psess": true,
+        "**/*.vsp": true,
+        "**/*.vspx": true,
+        "**/*.sap": true,
+        "**/*.e2e": true,
+        // TFS
+        "**/$tf/": true,
+        "**/*.gpState": true,
+        // ReSharper
+        "**/_ReSharper*/": true,
+        "**/*.[Rr]e[Ss]harper": true,
+        "**/*.DotSettings.user": true,
+        // TeamCity
+        "**/_TeamCity*": true,
+        // Code coverage
+        "**/*.dotCover": true,
+        "**/.axoCover/*": true,
+        "**/coverage*.json": true,
+        "**/coverage*.xml": true,
+        "**/coverage*.info": true,
+        "**/*.coverage": true,
+        "**/*.coveragexml": true,
+        // NCrunch
+        "**/_NCrunch_*": true,
+        "**/.NCrunch_*": true,
+        "**/.*crunch*.local.xml": true,
+        "**/nCrunchTemp_*": true,
+        // MightyMoose
+        "**/*.mm.*": true,
+        "**/AutoTest.Net/": true,
+        // Web workbench
+        "**/.sass-cache/": true,
+        "**/[Ee]xpress/": true,
+        // DocProject
+        "**/DocProject/buildhelp/": true,
+        "**/DocProject/Help/*.HxT": true,
+        "**/DocProject/Help/*.HxC": true,
+        "**/DocProject/Help/*.hhc": true,
+        "**/DocProject/Help/*.hhk": true,
+        "**/DocProject/Help/*.hhp": true,
+        "**/DocProject/Help/Html2": true,
+        "**/DocProject/Help/html": true,
+        // Publish
+        "**/publish/": true,
+        "**/*.[Pp]ublish.xml": true,
+        "**/*.azurePubxml": true,
+        "**/*.pubxml": true,
+        "**/*.publishproj": true,
+        "**/PublishScripts/": true,
+        // NuGet
+        "**/*.nupkg": true,
+        "**/*.snupkg": true,
+        "**/[Pp]ackages/*": true,
+        "**/*.nuget.props": true,
+        "**/*.nuget.targets": true,
+        // Azure
+        "**/csx/": true,
+        "**/*.build.csdef": true,
+        "**/ecf/": true,
+        "**/rcf/": true,
+        // Windows Store
+        "**/AppPackages/": true,
+        "**/BundleArtifacts/": true,
+        "**/Package.StoreAssociation.xml": true,
+        "**/_pkginfo.txt": true,
+        "**/*.appx": true,
+        "**/*.appxbundle": true,
+        "**/*.appxupload": true,
+        // Cache
+        "**/*.[Cc]ache": true,
+        // Others
+        "**/ClientBin/": true,
+        "**/~$*": true,
+        "**/*~": true,
+        "**/*.dbmdl": true,
+        "**/*.dbproj.schemaview": true,
+        "**/*.jfm": true,
+        "**/*.pfx": true,
+        "**/*.publishsettings": true,
+        "**/orleans.codegen.cs": true,
+        // Generated code
+        "**/Generated_Code/": true,
+        // Backup
+        "**/_UpgradeReport_Files/": true,
+        "**/Backup*/": true,
+        "**/UpgradeLog*.XML": true,
+        "**/UpgradeLog*.htm": true,
+        "**/ServiceFabricBackup/": true,
+        "**/*.rptproj.bak": true,
+        // SQL Server
+        "**/*.mdf": true,
+        "**/*.ldf": true,
+        "**/*.ndf": true,
+        // Business Intelligence
+        "**/*.rdl.data": true,
+        "**/*.bim.layout": true,
+        "**/*.bim_*.settings": true,
+        "**/*.rptproj.rsuser": true,
+        "**/*- [Bb]ackup.rdl": true,
+        "**/*- [Bb]ackup ([0-9]).rdl": true,
+        "**/*- [Bb]ackup ([0-9][0-9]).rdl": true,
+        // Fakes
+        "**/FakesAssemblies/": true,
+        "**/*.GhostDoc.xml": true,
+        // Node.js
+        "**/.ntvs_analysis.dat": true,
+        "**/node_modules/": true,
+        // Visual Studio 6
+        "**/*.plg": true,
+        "**/*.opt": true,
+        "**/*.vbw": true,
+        "**/*.vbp": true,
+        "**/*.dsw": true,
+        "**/*.dsp": true,
+        // LightSwitch
+        "**/*.HTMLClient/GeneratedArtifacts": true,
+        "**/*.DesktopClient/GeneratedArtifacts": true,
+        "**/*.DesktopClient/ModelManifest.xml": true,
+        "**/*.Server/GeneratedArtifacts": true,
+        "**/*.Server/ModelManifest.xml": true,
+        "**/_Pvt_Extensions": true,
+        // Paket
+        "**/.paket/paket.exe": true,
+        "**/paket-files/": true,
+        // FAKE
+        "**/.fake/": true,
+        // CodeRush
+        "**/.cr/personal": true,
+        // Python
+        "**/__pycache__/": true,
+        "**/*.pyc": true,
+        // Tabs Studio
+        "**/*.tss": true,
+        // Telerik
+        "**/*.jmconfig": true,
+        // BizTalk
+        "**/*.btp.cs": true,
+        "**/*.btm.cs": true,
+        "**/*.odx.cs": true,
+        "**/*.xsd.cs": true,
+        // OpenCover
+        "**/OpenCover/": true,
+        // Azure Stream Analytics
+        "**/ASALocalRun/": true,
+        // MSBuild
+        "**/*.binlog": true,
+        "**/MSBuild_Logs/": true,
+        // AWS
+        "**/.aws-sam": true,
+        // NVidia
+        "**/*.nvuser": true,
+        // MFractors
+        "**/.mfractor/": true,
+        // Local History
+        "**/.localhistory/": true,
+        "**/.vshistory/": true,
+        // Healthcheck
+        "**/healthchecksdb": true,
+        // Migration
+        "**/MigrationBackup/": true,
+        // Ionide
+        "**/.ionide/": true,
+        // Fody
+        "**/FodyWeavers.xsd": true,
+        // VS Code (but keep settings.json)
+        "**/.vscode/*": true,
+        // History
+        "**/.history/": true,
+        // Extensions
+        "**/*.vsix": true,
+        // Windows Installer
+        "**/*.cab": true,
+        "**/*.msi": true,
+        "**/*.msix": true,
+        "**/*.msm": true,
+        "**/*.msp": true,
+        // Custom - but NOT .BongoCatSrc/ (so it remains searchable)
+        "**/.cursorignore": true,
+        "**/Directory.Local.props": true
+        // Note: .BongoCatSrc/ is intentionally NOT in this list so it can be searched
+    }
+}
