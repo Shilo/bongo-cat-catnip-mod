@@ -1,4 +1,5 @@
-﻿using CatnipMod.Utilities;
+using CatnipMod.Utilities;
+using System.Reflection;
 using UnityEngine;
 
 namespace CatnipMod
@@ -7,7 +8,14 @@ namespace CatnipMod
 	{
 		private void Awake()
 		{
-			Log.Info("Mod loaded.");
+			var assembly = Assembly.GetExecutingAssembly();
+			var versionAttr = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
+			var companyAttr = assembly.GetCustomAttribute<AssemblyCompanyAttribute>();
+
+			var version = versionAttr?.Version ?? "Unknown";
+			var company = companyAttr?.Company ?? "Unknown";
+
+			Log.Info($"Mod v{version} by {company} loaded.");
 		}
 
 		private void OnDestroy()

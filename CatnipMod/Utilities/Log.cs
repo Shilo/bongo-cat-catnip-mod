@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -36,10 +35,26 @@ namespace CatnipMod.Utilities
 
 		private static string BuildMessage(params object[] messages)
 		{
-			var timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+			var callerClass = GetCallerClass();
+			var callerClassPrefix = callerClass != null ? $"{callerClass} | " : string.Empty;
 			var message = string.Join(" ", messages.Select(m => m?.ToString() ?? "null"));
 
-			return $"[{timestamp}] {Prefix} {message}";
+			return $"{Prefix} {callerClassPrefix}{message}";
+		}
+
+		private static string GetCallerClass()
+		{
+			var stackTrace = new System.Diagnostics.StackTrace(skipFrames: 3);
+			var frame = stackTrace.GetFrame(0);
+			if (frame == null)
+				return null;
+
+			var method = frame.GetMethod();
+			if (method == null)
+				return null;
+
+			var declaringType = method.DeclaringType;
+			return declaringType != null ? declaringType.Name : null;
 		}
 	}
 }
