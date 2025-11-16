@@ -24,6 +24,7 @@ TODO
   - [Notes](#notes)
 - [Third-Party Libraries](#third-party-libraries)
   - [UnityDoorstop](#unitydoorstop-winhttpdll)
+  - [Harmony](#harmony-0harmonydll)
 
 ## Installation
 
@@ -210,7 +211,9 @@ CatnipMod/
 
 ### Notes
 
-- The mod uses **UnityDoorstop** to inject into the Unity runtime
+- Dependencies:
+  - **UnityDoorstop** to inject into the Unity runtime
+  - **Harmony** for runtime method patching
 - Target framework is **.NET Framework 4.0** (matches Unity's runtime)
 - Unity assemblies are referenced from `BongoCat_Data\Managed\`
 - The build system automatically creates zip files for distribution
@@ -223,6 +226,16 @@ CatnipMod/
 
 ### [UnityDoorstop](https://github.com/NeighTools/UnityDoorstop) (`winhttp.dll`)
 
+**Version:** [4.4.1+](https://github.com/NeighTools/UnityDoorstop/releases/tag/v4.4.1)
+
 A library that enables modding Unity games by injecting and executing managed .NET assemblies early in the Unity runtime, before the game's main code runs. This allows mods to hook into game systems and modify behavior.
 
 Licensed under the GNU Lesser General Public License v2.1. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for the full license text.
+
+### [Harmony](https://github.com/pardeike/Harmony) (`0Harmony.dll`)
+
+**Version:** [Harmony-Fat 2.4.2.0+ (net35)](https://github.com/pardeike/Harmony/releases/tag/v2.4.2.0)
+
+A library for patching, replacing and decorating .NET methods during runtime. Used by this mod to patch game methods and modify behavior.
+
+Licensed under the MIT License. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for the full license text.
