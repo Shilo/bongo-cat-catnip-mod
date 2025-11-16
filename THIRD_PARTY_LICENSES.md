@@ -4,11 +4,11 @@
 
 This project includes third-party software libraries that are subject to their own license terms.
 
-## [Harmony](https://github.com/pardeike/Harmony)
+## [Harmony ↗](https://github.com/pardeike/Harmony)
 
 **Library:** Harmony (`0Harmony.dll`)  
 **Source:** https://github.com/pardeike/Harmony  
-**License:** [MIT License](https://github.com/pardeike/Harmony/blob/master/LICENSE)  
+**License:** [MIT License ↗](https://github.com/pardeike/Harmony/blob/master/LICENSE)  
 **Copyright:** Copyright (c) 2017 Andreas Pardeike
 
 This project uses Harmony for runtime method patching. Harmony is distributed under the MIT License.
@@ -37,11 +37,11 @@ SOFTWARE.
 
 ---
 
-## [UnityDoorstop](https://github.com/NeighTools/UnityDoorstop)
+## [UnityDoorstop ↗](https://github.com/NeighTools/UnityDoorstop)
 
 **Library:** UnityDoorstop (`winhttp.dll`)  
 **Source:** https://github.com/NeighTools/UnityDoorstop  
-**License:** [GNU Lesser General Public License v2.1](https://github.com/NeighTools/UnityDoorstop/blob/master/LICENSE)  
+**License:** [GNU Lesser General Public License v2.1 ↗](https://github.com/NeighTools/UnityDoorstop/blob/master/LICENSE)  
 **Copyright:** Copyright (C) NeighTools
 
 This project uses UnityDoorstop to enable modding functionality. UnityDoorstop is distributed under the GNU Lesser General Public License v2.1 (LGPL-2.1).

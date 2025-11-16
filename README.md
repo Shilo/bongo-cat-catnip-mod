@@ -1,4 +1,4 @@
-# [Bongo Cat Catnip Mod](https://github.com/Shilo/bongo-cat-catnip-mod/)
+# [Bongo Cat Catnip Mod ↗](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
 [![Bongo Cat Logo](CatnipMod/Assets/BongoCat/CatnipMod/logo.png)](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
@@ -22,7 +22,7 @@ TODO
 
 ## Installation
 
-1. Go to the [Releases](https://github.com/Shilo/bongo-cat-catnip-mod/releases) page
+1. Go to the [Releases ↗](https://github.com/Shilo/bongo-cat-catnip-mod/releases) page
 2. Download the latest `CatnipMod.zip` file
 3. Extract the contents of the zip file
 
@@ -80,13 +80,13 @@ TODO
     - `doorstop_config.ini` (in the root)
     - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
 
-## [Bongo Cat Game](https://store.steampowered.com/app/3419430/Bongo_Cat/)
+## [Bongo Cat Game ↗](https://store.steampowered.com/app/3419430/Bongo_Cat/)
 
 [![Steam](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3419430/2e6c93c020fe13d09d8120bb9164ed7cb58f00c5/header.jpg?t=1759317272)](https://store.steampowered.com/app/3419430/Bongo_Cat/)
 
 > Bongo cat needs your help. Bongo cat needz more hatz!!! Every time you press a key, Bongo cat will punch your taskbar. Type, click, play, work to collect more points. Which hats will you find?
 
-**Publisher:** [Irox Games](https://store.steampowered.com/publisher/irox?snr=1_5_9__2000)  
-**Developer:** [Marcel Zurawka](https://store.steampowered.com/developer/irox?snr=1_5_9__2000), [Julius Krüger](https://store.steampowered.com/developer/irox?snr=1_5_9__2000)
+**Publisher:** [Irox Games ↗](https://store.steampowered.com/publisher/irox?snr=1_5_9__2000)  
+**Developer:** [Marcel Zurawka ↗](https://store.steampowered.com/developer/irox?snr=1_5_9__2000), [Julius Krüger ↗](https://store.steampowered.com/developer/irox?snr=1_5_9__2000)
 
 *Bongo Cat © Irox Games, Marcel Zurawka, Julius Krüger. Bongo Cat is a trademark of its respective owners. This mod is not affiliated with, endorsed by, or sponsored by the creators of Bongo Cat.*

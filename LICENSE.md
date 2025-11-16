@@ -4,7 +4,7 @@
 
 MIT License
 
-Copyright (c) 2025 Shilo
+Copyright (c) 2025 [Shilo ↗](https://github.com/shilo)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

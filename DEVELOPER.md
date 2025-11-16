@@ -31,8 +31,8 @@ This document provides instructions for setting up a development environment, bu
 ## Prerequisites
 
 - **Visual Studio 2019 or later** (or any IDE that supports .NET Framework 4.8 projects)
-  - Download: [Visual Studio 2026 Community](https://visualstudio.microsoft.com/downloads/) (free)
-  - Or [Build Tools for Visual Studio 2026](https://aka.ms/vs/stable/vs_BuildTools.exe) (minimal installation, no IDE)
+  - Download: [Visual Studio 2026 Community ↗](https://visualstudio.microsoft.com/downloads/) (free)
+  - Or [Build Tools for Visual Studio 2026 ↗](https://aka.ms/vs/stable/vs_BuildTools.exe) (minimal installation, no IDE)
 - **Bongo Cat** installed via Steam
 - **.NET Framework 4.8**
 
@@ -149,15 +149,15 @@ CatnipMod/
 
 ## Third-Party Libraries
 
-### [UnityDoorstop](https://github.com/NeighTools/UnityDoorstop) (`winhttp.dll`)
+### [UnityDoorstop ↗](https://github.com/NeighTools/UnityDoorstop) (`winhttp.dll`)
 
-**Version:** [4.4.1+](https://github.com/NeighTools/UnityDoorstop/releases/tag/v4.4.1)
+**Version:** [4.4.1+ ↗](https://github.com/NeighTools/UnityDoorstop/releases/tag/v4.4.1)
 
 A library that enables modding Unity games by injecting and executing managed .NET assemblies early in the Unity runtime, before the game's main code runs. This allows mods to hook into game systems and modify behavior.
 
-### [Harmony](https://github.com/pardeike/Harmony) (`0Harmony.dll`)
+### [Harmony ↗](https://github.com/pardeike/Harmony) (`0Harmony.dll`)
 
-**Version:** [Harmony-Fat 2.4.2.0+ (net48)](https://github.com/pardeike/Harmony/releases/tag/v2.4.2.0)
+**Version:** [Harmony-Fat 2.4.2.0+ (net48) ↗](https://github.com/pardeike/Harmony/releases/tag/v2.4.2.0)
 
 A library for patching, replacing and decorating .NET methods during runtime. Used by this mod to patch game methods and modify behavior.
 
