@@ -1,4 +1,4 @@
-# MIT License
+# License
 
 ← [Back to README](README.md)
 
