@@ -2,7 +2,9 @@
 
 [![Bongo Cat Logo](CatnipMod/Assets/BongoCat/CatnipMod/logo.png)](https://github.com/Shilo/bongo-cat-catnip-mod/)
 
-Catnip-infused mod that brings out [Bongo Cat](https://store.steampowered.com/app/3419430/Bongo_Cat/)'s zoomies and purrs. Includes quality of life features and fixes. Free, safe, and no cheats.
+> Catnip-infused mod that brings out [Bongo Cat](#bongo-cat-game)'s zoomies and purrs. Includes quality of life features and fixes. Free, safe, and no cheats.
+
+This mod extends the [Bongo Cat](#bongo-cat-game) game with additional features and improvements by modifying the game's code while it runs, without changing the original game files.
 
 ## Features
 
@@ -25,6 +27,8 @@ TODO
 - [Third-Party Libraries](#third-party-libraries)
   - [UnityDoorstop](#unitydoorstop-winhttpdll)
   - [Harmony](#harmony-0harmonydll)
+- [Bongo Cat Game](#bongo-cat-game)
+- [License ↗](LICENSE)
 
 ## Installation
 
@@ -85,8 +89,6 @@ TODO
     - `winhttp.dll` (in the root)
     - `doorstop_config.ini` (in the root)
     - `CatnipMod\` folder (containing `CatnipMod.dll` and assets)
-
----
 
 ## Developer Setup
 
@@ -220,8 +222,6 @@ CatnipMod/
 - Release builds do not generate PDB files (debug symbols)
 - Installation scripts automatically detect Steam installation paths from registry (HKCU, then HKLM, then common locations)
 
----
-
 ## Third-Party Libraries
 
 ### [UnityDoorstop](https://github.com/NeighTools/UnityDoorstop) (`winhttp.dll`)
@@ -239,3 +239,14 @@ Licensed under the GNU Lesser General Public License v2.1. See [THIRD_PARTY_LICE
 A library for patching, replacing and decorating .NET methods during runtime. Used by this mod to patch game methods and modify behavior.
 
 Licensed under the MIT License. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for the full license text.
+
+## [Bongo Cat Game](https://store.steampowered.com/app/3419430/Bongo_Cat/)
+
+[![Steam](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3419430/2e6c93c020fe13d09d8120bb9164ed7cb58f00c5/header.jpg?t=1759317272)](https://store.steampowered.com/app/3419430/Bongo_Cat/)
+
+> Bongo cat needs your help. Bongo cat needz more hatz!!! Every time you press a key, Bongo cat will punch your taskbar. Type, click, play, work to collect more points. Which hats will you find?
+
+**Publisher:** [Irox Games](https://store.steampowered.com/publisher/irox?snr=1_5_9__2000)  
+**Developer:** [Marcel Zurawka](https://store.steampowered.com/developer/irox?snr=1_5_9__2000), [Julius Krüger](https://store.steampowered.com/developer/irox?snr=1_5_9__2000)
+
+*Bongo Cat © Irox Games, Marcel Zurawka, Julius Krüger. Bongo Cat is a trademark of its respective owners. This mod is not affiliated with, endorsed by, or sponsored by the creators of Bongo Cat.*
