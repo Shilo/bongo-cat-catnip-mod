@@ -1,5 +1,4 @@
-﻿//using HarmonyLib;
-
+﻿using HarmonyLib;
 using Steamworks;
 using System;
 
@@ -11,8 +10,8 @@ namespace Doorstop
 		{
 			UnsetDoorstopEnvVarsIfNotSteamRunning();
 
-			//var harmony = new Harmony("com.shilo.catnipmod");
-			//harmony.PatchAll();
+			var harmony = new Harmony("com.shilo.catnipmod");
+			harmony.PatchAll();
 		}
 
 		// Workaround fix for Doorstop bug:

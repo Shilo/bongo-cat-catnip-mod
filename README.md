@@ -92,11 +92,11 @@ TODO
 
 ### Prerequisites
 
-- **Visual Studio 2019 or later** (or any IDE that supports .NET Framework 4.0+ projects)
+- **Visual Studio 2019 or later** (or any IDE that supports .NET Framework 4.8 projects)
   - Download: [Visual Studio 2026 Community](https://visualstudio.microsoft.com/downloads/) (free)
   - Or [Build Tools for Visual Studio 2026](https://aka.ms/vs/stable/vs_BuildTools.exe) (minimal installation, no IDE)
 - **Bongo Cat** installed via Steam
-- **.NET Framework 4.0** or later
+- **.NET Framework 4.8**
 
 ### Initial Setup
 
@@ -214,7 +214,7 @@ CatnipMod/
 - Dependencies:
   - **UnityDoorstop** to inject into the Unity runtime
   - **Harmony** for runtime method patching
-- Target framework is **.NET Framework 4.0** (matches Unity's runtime)
+- Target framework is **.NET Framework 4.8**
 - Unity assemblies are referenced from `BongoCat_Data\Managed\`
 - The build system automatically creates zip files for distribution
 - Release builds do not generate PDB files (debug symbols)
@@ -234,7 +234,7 @@ Licensed under the GNU Lesser General Public License v2.1. See [THIRD_PARTY_LICE
 
 ### [Harmony](https://github.com/pardeike/Harmony) (`0Harmony.dll`)
 
-**Version:** [Harmony-Fat 2.4.2.0+ (net35)](https://github.com/pardeike/Harmony/releases/tag/v2.4.2.0)
+**Version:** [Harmony-Fat 2.4.2.0+ (net48)](https://github.com/pardeike/Harmony/releases/tag/v2.4.2.0)
 
 A library for patching, replacing and decorating .NET methods during runtime. Used by this mod to patch game methods and modify behavior.
 

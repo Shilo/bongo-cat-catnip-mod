@@ -56,6 +56,10 @@
     <StartWorkingDirectory>$(BongoCatPath)</StartWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assets\BongoCat\CatnipMod\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="com.rlabrecque.steamworks.net">
       <HintPath>$(BongoCatManagedPath)\com.rlabrecque.steamworks.net.dll</HintPath>
       <Private>False</Private>
