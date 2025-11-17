@@ -23,12 +23,12 @@ namespace CatnipMod.Debug
 			UnityEngine.Debug.Log(BuildMessage(tag, messages));
 		}
 
-		public static void Warning(params object[] messages)
+		public static void Warn(params object[] messages)
 		{
 			UnityEngine.Debug.LogWarning(BuildMessage(null, messages));
 		}
 
-		public static void WarningT(object tag, params object[] messages)
+		public static void WarnT(object tag, params object[] messages)
 		{
 			UnityEngine.Debug.LogWarning(BuildMessage(tag, messages));
 		}
