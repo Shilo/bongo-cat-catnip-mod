@@ -59,9 +59,11 @@
     <Reference Include="0Harmony, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Assets\BongoCat\CatnipMod\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>$(BongoCatManagedPath)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="com.rlabrecque.steamworks.net">
       <HintPath>$(BongoCatManagedPath)\com.rlabrecque.steamworks.net.dll</HintPath>
@@ -115,7 +117,14 @@
   <Target Name="CloseExistingBongoCat" AfterTargets="CreateZip" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
     <Exec Command="taskkill /F /IM BongoCat.exe &gt;NUL 2&gt;&amp;1" IgnoreExitCode="true" ContinueOnError="true" />
   </Target>
-  <Target Name="CopyToBongoCat" AfterTargets="CloseExistingBongoCat" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
+  <Target Name="CleanBongoCatModDirectory" AfterTargets="CloseExistingBongoCat" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
+    <PropertyGroup>
+      <CatnipModTargetDir>$(BongoCatPath)\CatnipMod</CatnipModTargetDir>
+    </PropertyGroup>
+    <Message Text="Cleaning CatnipMod directory at $(CatnipModTargetDir)" Importance="high" Condition="Exists('$(CatnipModTargetDir)')" />
+    <RemoveDir Directories="$(CatnipModTargetDir)" Condition="Exists('$(CatnipModTargetDir)')" ContinueOnError="true" />
+  </Target>
+  <Target Name="CopyToBongoCat" AfterTargets="CleanBongoCatModDirectory" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
     <PropertyGroup>
       <OutputModRoot>$(OutputPath)..\</OutputModRoot>
     </PropertyGroup>
