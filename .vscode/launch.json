@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Build",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/noop.js",
+      "preLaunchTask": "Build",
+      "console": "internalConsole"
+    },
+    {
+      "name": "Build & Run",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/noop.js",
+      "preLaunchTask": "Build & Run",
+      "console": "internalConsole"
+    }
+  ]
+}
+

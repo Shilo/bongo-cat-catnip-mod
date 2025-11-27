@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "msbuild",
+        "CatnipMod\\CatnipMod.csproj",
+        "/t:Rebuild",
+        "/p:Configuration=Release",
+        "/p:BuildingInsideVisualStudio=true"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Build & Run",
+      "type": "shell",
+      "dependsOn": [
+        "Build"
+      ],
+      "command": "Start-Process",
+      "args": [
+        "-FilePath",
+        "C:\\Program Files (x86)\\Steam\\steamapps\\common\\BongoCat\\BongoCat.exe",
+        "-WorkingDirectory",
+        "C:\\Program Files (x86)\\Steam\\steamapps\\common\\BongoCat"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}
