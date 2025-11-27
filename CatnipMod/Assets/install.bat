@@ -75,8 +75,8 @@ if %ERROR% equ 0 (
     echo Installation complete.
     echo Launch Bongo Cat through Steam to verify the mod is working.
     echo.
-    echo        /\___/\ 
-    echo       ^( o ^. o ^)
+    echo        /\_/\
+    echo       ^(o ^. o^)
     
     start "" "%GAME_DIR%"
 ) else (

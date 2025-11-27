@@ -96,8 +96,8 @@ echo.
 if %ERROR% equ 0 (
     echo Uninstallation complete.
     echo.
-    echo        /\___/\ 
-    echo       ^( o ^. o ^)
+    echo        /\_/\
+    echo       ^(o ^. o^)
 
     start "" "%GAME_DIR%"
 ) else (
