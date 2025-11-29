@@ -51,7 +51,41 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "detail": "Launches BongoCat.exe using the path from Directory.Local.props or Directory.Build.props."
+      "detail": "Launches BongoCat via Steam using the app ID from Directory.Local.props or Directory.Build.props."
+    },
+    {
+      "label": "Open Game Folder",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\open-game-folder.ps1",
+        "-Workspace",
+        "${workspaceFolder}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "detail": "Opens the BongoCat installation folder in Windows Explorer."
+    },
+    {
+      "label": "Open Log File",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\open-log-file.ps1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "detail": "Opens the BongoCat Player.log file in the default text editor."
     }
   ]
 }

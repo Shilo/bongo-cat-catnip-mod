@@ -27,6 +27,24 @@
       "preLaunchTask": "Run",
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Open Game Folder",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/noop.js",
+      "preLaunchTask": "Open Game Folder",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Open Log File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/noop.js",
+      "preLaunchTask": "Open Log File",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
