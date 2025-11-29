@@ -1,10 +1,14 @@
 using Steamworks;
 using System;
+using System.Runtime.InteropServices;
 
 namespace CatnipMod.Utilities
 {
 	public static class DoorstopUtil
 	{
+		[DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+		private static extern bool SetEnvironmentVariable(string lpName, string lpValue);
+
 		/// <summary>
 		/// Workaround fix for Doorstop bug:
 		/// If Steam is not running on direct game launch, Doorstop environment variables never get unset.
@@ -13,6 +17,7 @@ namespace CatnipMod.Utilities
 		/// Without this fix, users would have to restart Steam to load Catnip mod again.
 		/// </summary>
 		/// <remarks>
+		/// Uses Win32 API directly via P/Invoke to work with stripped assemblies.
 		/// See: https://github.com/NeighTools/UnityDoorstop/issues/34
 		/// </remarks>
 		public static void UnsetEnvVarsIfNotSteamRunning()
@@ -20,8 +25,8 @@ namespace CatnipMod.Utilities
 			if (SteamAPI.IsSteamRunning())
 				return;
 
-			Environment.SetEnvironmentVariable("DOORSTOP_DISABLE", null);
-			Environment.SetEnvironmentVariable("DOORSTOP_INITIALIZED", null);
+			SetEnvironmentVariable("DOORSTOP_DISABLE", null);
+			SetEnvironmentVariable("DOORSTOP_INITIALIZED", null);
 		}
 	}
 }
