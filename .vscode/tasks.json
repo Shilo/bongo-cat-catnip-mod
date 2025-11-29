@@ -2,6 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Build & Run",
+      "type": "shell",
+      "dependsOn": [
+        "Build",
+        "Run"
+      ],
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "detail": "Rebuilds Release mode then launches BongoCat.exe."
+    },
+    {
       "label": "Build",
       "type": "shell",
       "command": "dotnet",
@@ -39,19 +52,6 @@
         "cwd": "${workspaceFolder}"
       },
       "detail": "Launches BongoCat.exe using the path from Directory.Local.props or Directory.Build.props."
-    },
-    {
-      "label": "Build & Run",
-      "type": "shell",
-      "dependsOn": [
-        "Build",
-        "Run"
-      ],
-      "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "detail": "Rebuilds Release mode then launches BongoCat.exe."
     }
   ]
 }
