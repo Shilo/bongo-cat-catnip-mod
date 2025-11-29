@@ -403,10 +403,7 @@ FodyWeavers.xsd
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-!.vscode/noop.js
-!.vscode/run.ps1
-!.vscode/open-game-folder.ps1
-!.vscode/open-log-file.ps1
+!.vscode/scripts/
 
 # Local History for Visual Studio Code
 .history/

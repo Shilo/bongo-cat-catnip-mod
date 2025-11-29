@@ -44,7 +44,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-File",
-        "${workspaceFolder}\\.vscode\\run.ps1",
+        "${workspaceFolder}\\.vscode\\scripts\\run.ps1",
         "-Workspace",
         "${workspaceFolder}"
       ],
@@ -62,7 +62,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-File",
-        "${workspaceFolder}\\.vscode\\open-game-folder.ps1",
+        "${workspaceFolder}\\.vscode\\scripts\\open-game-folder.ps1",
         "-Workspace",
         "${workspaceFolder}"
       ],
@@ -80,7 +80,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-File",
-        "${workspaceFolder}\\.vscode\\open-log-file.ps1"
+        "${workspaceFolder}\\.vscode\\scripts\\open-log-file.ps1"
       ],
       "options": {
         "cwd": "${workspaceFolder}"

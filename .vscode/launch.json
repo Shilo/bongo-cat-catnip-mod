@@ -5,7 +5,7 @@
       "name": "Build & Run",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/.vscode/noop.js",
+      "program": "${workspaceFolder}/.vscode/scripts/noop.js",
       "preLaunchTask": "Build & Run",
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen"
@@ -14,7 +14,7 @@
       "name": "Build",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/.vscode/noop.js",
+      "program": "${workspaceFolder}/.vscode/scripts/noop.js",
       "preLaunchTask": "Build",
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen"
@@ -23,7 +23,7 @@
       "name": "Run",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/.vscode/noop.js",
+      "program": "${workspaceFolder}/.vscode/scripts/noop.js",
       "preLaunchTask": "Run",
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen"
@@ -32,7 +32,7 @@
       "name": "Open Game Folder",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/.vscode/noop.js",
+      "program": "${workspaceFolder}/.vscode/scripts/noop.js",
       "preLaunchTask": "Open Game Folder",
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen"
@@ -41,7 +41,7 @@
       "name": "Open Log File",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/.vscode/noop.js",
+      "program": "${workspaceFolder}/.vscode/scripts/noop.js",
       "preLaunchTask": "Open Log File",
       "console": "internalConsole",
       "internalConsoleOptions": "neverOpen"
