@@ -7,7 +7,17 @@
       "request": "launch",
       "program": "${workspaceFolder}/.vscode/noop.js",
       "preLaunchTask": "Build",
-      "console": "internalConsole"
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Run",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/.vscode/noop.js",
+      "preLaunchTask": "Run",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen"
     },
     {
       "name": "Build & Run",
@@ -15,8 +25,8 @@
       "request": "launch",
       "program": "${workspaceFolder}/.vscode/noop.js",
       "preLaunchTask": "Build & Run",
-      "console": "internalConsole"
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
-

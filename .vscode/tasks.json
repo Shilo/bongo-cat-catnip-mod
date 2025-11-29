@@ -19,24 +19,39 @@
       },
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "detail": "Rebuilds Release mode using MSBuild with Visual Studio-specific properties."
+    },
+    {
+      "label": "Run",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\run.ps1",
+        "-Workspace",
+        "${workspaceFolder}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "detail": "Launches BongoCat.exe using the path from Directory.Local.props or Directory.Build.props."
     },
     {
       "label": "Build & Run",
       "type": "shell",
       "dependsOn": [
-        "Build"
+        "Build",
+        "Run"
       ],
-      "command": "Start-Process",
-      "args": [
-        "-FilePath",
-        "C:\\Program Files (x86)\\Steam\\steamapps\\common\\BongoCat\\BongoCat.exe",
-        "-WorkingDirectory",
-        "C:\\Program Files (x86)\\Steam\\steamapps\\common\\BongoCat"
-      ],
+      "dependsOrder": "sequence",
       "options": {
         "cwd": "${workspaceFolder}"
-      }
+      },
+      "detail": "Rebuilds Release mode then launches BongoCat.exe."
     }
   ]
 }
