@@ -398,12 +398,15 @@ FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
 .vscode/*
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
 !.vscode/noop.js
+!.vscode/run.ps1
+!.vscode/open-game-folder.ps1
+!.vscode/open-log-file.ps1
 
 # Local History for Visual Studio Code
 .history/
