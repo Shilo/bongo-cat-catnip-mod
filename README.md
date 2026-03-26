@@ -59,29 +59,7 @@ BongoCat/
 
 ### Verification
 
-After launching the game, you can verify the mod is working by checking the game's log file for mod initialization messages.
-
-**To view the log file:**
-
-1. Press `Win + R` to open the Run dialog
-2. Type or paste: `%USERPROFILE%\AppData\LocalLow\Irox Games\BongoCat\Player.log`
-3. Press Enter (this will open the log file in your default text editor)
-
-**What to look for:**
-
-If the mod is working correctly, you should see a log entry like this when the game starts:
-
-```
-[2025-11-16 14:30:45] [CatnipMod] CatnipMod | Mod v1.0.0 by Shilo loaded.
-```
-
-The log message includes:
-- A timestamp in `[yyyy-MM-dd HH:mm:ss]` format
-- The `[CatnipMod]` prefix
-- The class name `CatnipMod |`
-- The message showing the mod version and author
-
-If you see this message, the mod has been successfully loaded and is running.
+TODO
 
 ### Uninstallation
 

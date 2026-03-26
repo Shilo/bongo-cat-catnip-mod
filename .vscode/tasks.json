@@ -12,8 +12,7 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "detail": "Rebuilds Release mode then launches BongoCat.exe.",
-      "problemMatcher": []
+      "detail": "Rebuilds Release mode then launches BongoCat.exe."
     },
     {
       "label": "Build",
@@ -52,8 +51,7 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "detail": "Launches BongoCat via Steam using the app ID from Directory.Local.props or Directory.Build.props.",
-      "problemMatcher": []
+      "detail": "Launches BongoCat via Steam using the app ID from Directory.Local.props or Directory.Build.props."
     },
     {
       "label": "Open Game Folder",
@@ -71,8 +69,7 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "detail": "Opens the BongoCat installation folder in Windows Explorer.",
-      "problemMatcher": []
+      "detail": "Opens the BongoCat installation folder in Windows Explorer."
     },
     {
       "label": "Open Log File",
@@ -88,8 +85,7 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "detail": "Opens the BongoCat Player.log file in the default text editor.",
-      "problemMatcher": []
+      "detail": "Opens the BongoCat Player.log file in the default text editor."
     }
   ]
 }
